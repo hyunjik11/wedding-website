@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Soohyun & Hyunjik</title>
+    <link rel="icon" href="images/favicon.png" />
+    <meta charset="utf-8" />
+    <meta property="og:title" content="Soohyun & Hyunjik" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:description"
+      content="The wedding of Soohyun & Hyunjik"
+    />
+
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
+    />
+    <meta name="description" content="The wedding of Soohyun & Hyunjik" />
+    <meta name="keywords" content="Wedding" />
+    <meta name="author" content="Hyunjik Kim" />
+
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&family=Nuosu+SIL&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .image-content {
+        background-image: url("../images/main_photo_orig.jpeg");
+        background-repeat: no-repeat;
+        background-position: top;
+        background-size: cover;
+        flex: 1 1 auto;
+      }
+      .box-custom {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        height: 100vh;
+        width: 100vw;
+        padding: 0 var(--left-right-padding);
+        margin: 0;
+      }
+      .navbar-item-custom {
+        font-family: var(--font);
+      }
+      .footer-custom {
+        display: flex;
+        flex: 0 1 var(--header-footer-height);
+        text-align: center;
+        font-family: var(--font);
+        font-weight: bold;
+        color: var(--text-color);
+        justify-content: center;
+        align-items: center;
+      }
+      a:hover {
+        color: rgb(100, 100, 100);
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="box-custom">
+      <nav
+        id="global-nav-custom"
+        class="navbar-custom animated-custom slideInDown-custom"
+      >
+        <div class="container-custom">
+          <div class="navbar-brand-custom">
+            <a class="navbar-item-custom" href="index.html">
+              Soohyun & Hyunjik
+            </a>
+          </div>
+          <div class="navbar-menu-custom">
+            <div class="navbar-end-custom">
+              <a class="navbar-item-custom" href="gallery.html"> Gallery </a>
+              <a class="navbar-item-custom" href="venue.html"> Venue </a>
+              <a class="navbar-item-custom" href="index_kor.html"> 한글 </a>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div class="image-content"></div>
+      <div class="footer-custom">
+        <span>
+          08.20.2022, 5:30pm <br />
+          Seoul Westin Josun Hotel
+        </span>
+      </div>
+    </div>
+  </body>
+</html>

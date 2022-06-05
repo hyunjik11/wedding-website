@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Venue</title>
+
+    <meta charset="utf-8" />
+    <meta property="og:title" content="Venue" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:description"
+      content="The wedding of Soohyun & Hyunjik"
+    />
+
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
+    />
+    <meta name="description" content="The wedding of Soohyun & Hyunjik" />
+    <meta name="keywords" content="Wedding" />
+    <meta name="author" content="Hyunjik Kim" />
+
+    <link rel="stylesheet" href="styles.css" />
+    <style type="text/css">
+      #global-nav-custom {
+        position: fixed;
+        background-color: white;
+        padding: 0 var(--left-right-padding);
+      }
+      .navbar-item-custom {
+        font-family: var(--font);
+      }
+      section {
+        margin-top: 85px;
+        padding: 0 1.5rem;
+        font-family: var(--font);
+        color: var(--text-color);
+        display: flex;
+        justify-content: center;
+        text-align: center;
+      }
+      .custom-hr {
+        border: none;
+        background-color: grey;
+        text-align: center;
+        height: 1px;
+        margin: 0;
+      }
+      .header-custom {
+        font-family: var(--font);
+        font-size: xx-large;
+        color: var(--text-color);
+        height: 60px;
+      }
+      #map {
+        height: 400px;
+        width: 100%;
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav
+      id="global-nav-custom"
+      class="navbar-custom animated-custom slideInDown-custom"
+    >
+      <div class="container-custom">
+        <div class="navbar-brand-custom">
+          <a class="navbar-item-custom" href="index.html">
+            Soohyun & Hyunjik
+          </a>
+        </div>
+        <div class="navbar-menu-custom">
+          <div class="navbar-end-custom">
+            <a class="navbar-item-custom" href="gallery.html"> Gallery </a>
+            <a class="navbar-item-custom" href="venue.html"> Venue </a>
+            <a class="navbar-item-custom" href="index_kor.html"> 한글 </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <section class="hero-custom">
+      <div class="header-custom">
+        <span>Location</span>
+        <hr class="custom-hr" />
+      </div>
+      <div id="map"></div>
+      <span>
+        <b>Address</b>: Seoul Jung-gu Sogong-ro 106, Seoul Westin Josun Hotel
+        <br />
+        <b>Parking</b>: Hotel parking lot available. <br />
+        <b>Metro</b>: City Hall (Line 1) exit 6 or Eulgiro 1-ga Station (Line 2)
+        exit 4.
+      </span>
+    </section>
+    <footer>
+      <span>Website designed by Soohyun & developed by Hyunjik</span>
+    </footer>
+    <script
+      async
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD63t9I7vwqdt_cvHXz1gJm-ryPmc2SDTY&callback=initMap"
+    ></script>
+    <script async src="map.js"></script>
+  </body>
+</html>
