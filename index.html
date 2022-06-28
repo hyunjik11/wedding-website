@@ -37,10 +37,14 @@
         margin: 0;
       }
       .navbar-item-custom {
-        font-family: var(--font);
+        font-family: var(--font-navbar);
+      }
+      .navbar-item-custom.title {
+        font-family: var(--font-title);
+        letter-spacing: 0.2rem;
       }
       .date-venue {
-        font-family: var(--font);
+        font-family: var(--font-venue);
       }
       a:hover {
         color: rgb(100, 100, 100);
@@ -56,7 +60,7 @@
       >
         <div class="container-custom">
           <div class="navbar-brand-custom">
-            <a class="navbar-item-custom" href="index.html">
+            <a class="navbar-item-custom title" href="index.html">
               Soohyun & Hyunjik
             </a>
           </div>
@@ -70,10 +74,12 @@
         </div>
       </nav>
       <div class="image-content"></div>
+      <img class="image-bigscreen" src="images/main_photo_orig.jpeg" />
       <div class="date-venue">
         <span>
-          08.20.2022, 5:30pm <br />
-          Seoul Westin Josun Hotel
+          08.20.2022 <br />
+          Seoul Westin Josun Hotel <br />
+          Grand Ballroom Hall
         </span>
       </div>
     </div>

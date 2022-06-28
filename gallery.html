@@ -29,11 +29,14 @@
     <style type="text/css">
       #global-nav-custom {
         position: fixed;
-        background-color: white;
         padding: 0 var(--left-right-padding);
       }
       .navbar-item-custom {
-        font-family: var(--font);
+        font-family: var(--font-navbar);
+      }
+      .navbar-item-custom.title {
+        font-family: var(--font-title);
+        letter-spacing: 0.2rem;
       }
       #darkbox {
         width: 100vw;
@@ -122,7 +125,7 @@
     >
       <div class="container-custom">
         <div class="navbar-brand-custom">
-          <a class="navbar-item-custom" href="index.html">
+          <a class="navbar-item-custom title" href="index.html">
             Soohyun & Hyunjik
           </a>
         </div>
