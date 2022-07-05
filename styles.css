@@ -192,6 +192,7 @@ footer {
 @media screen and (max-width: 800px) {
   .image-content {
     background-image: url("images/main_photo_mobile.jpeg");
+    margin-top: 7vh;
   }
   .image-bigscreen {
     display: none;
@@ -259,7 +260,7 @@ a:hover {
   justify-content: center;
 }
 .about-timeline-image {
-  width: 20vw;
+  width: 280px;
   height: auto;
 }
 
