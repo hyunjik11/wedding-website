@@ -166,6 +166,7 @@ footer {
   background-repeat: no-repeat;
   background-position: top;
   background-size: cover;
+  padding-top: var(--header-footer-height);
   flex: 1 1 auto;
 }
 .date-venue {
@@ -182,10 +183,10 @@ footer {
     display: none;
   }
   .image-bigscreen {
-    height: 80vh;
+    height: 85vh;
     width: 100%;
     object-fit: contain;
-    padding: 3vh 3vw;
+    padding: calc(7vh + var(--header-footer-height)) 3vw 5vh;
   }
 }
 @media screen and (max-width: 800px) {
@@ -228,4 +229,74 @@ a:hover {
 .animated-custom {
   animation-duration: 1s;
   animation-fill-mode: both;
+}
+.about-subtitle {
+  text-align: center;
+  width: 100%;
+  padding-top: 3vh;
+  padding-bottom: 1vh;
+}
+.extra-top-padding {
+  padding-top: 5vh;
+}
+.about-photo-box {
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+}
+.about-photo {
+  width: 40vw;
+  height: auto;
+  padding: 0 1vw;
+}
+.about-text {
+  text-align: center;
+  font-size: 14px;
+  padding-top: 1vh;
+}
+.about-timeline-box {
+  display: flex;
+  justify-content: center;
+}
+.about-timeline-image {
+  width: 20vw;
+  height: auto;
+}
+
+.label-column:nth-child(1) {
+  width: 10%;
+  margin-left: auto;
+}
+.label-column:nth-child(2) {
+  width: 80%;
+  text-align: center;
+}
+.label-column:nth-child(3) {
+  width: 10%;
+  margin-right: auto;
+  text-align: center;
+}
+.bank-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 1vh;
+  font-size: 14px;
+}
+.bank-details {
+  background: white;
+  color: rgb(89, 87, 87);
+  width: 400px;
+  height: 45px;
+  display: none;
+}
+.transform-1 {
+  transition: all 0.2s ease;
+}
+.transform-2 {
+  transition: all 0.2s ease;
+}
+.transform-active {
+  transform: rotateZ(180deg);
 }

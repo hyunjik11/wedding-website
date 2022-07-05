@@ -27,6 +27,11 @@
       rel="stylesheet"
     />
     <style>
+      #global-nav-custom {
+        position: fixed;
+        background-color: var(--background-color);
+        padding: 0 var(--left-right-padding);
+      }
       .box-custom {
         display: flex;
         flex-direction: column;
@@ -48,6 +53,30 @@
       }
       a:hover {
         color: rgb(100, 100, 100);
+      }
+      section {
+        margin-top: 0;
+        padding: 0 1.5rem;
+        font-family: var(--font-title), serif;
+        color: var(--text-color);
+        text-align: center;
+      }
+      .custom-hr {
+        border: none;
+        background-color: grey;
+        text-align: center;
+        height: 1px;
+        margin: 0;
+      }
+      .header-custom {
+        font-family: var(--font-kor), serif;
+      }
+      .about-subtitle {
+        font-family: var(--font-venue);
+        font-weight: bold;
+      }
+      .extra-top-padding {
+        padding-top: 5vh;
       }
     </style>
   </head>
@@ -77,11 +106,36 @@
       <img class="image-bigscreen" src="images/main_photo_orig.jpeg" />
       <div class="date-venue">
         <span>
-          08.20.2022 <br />
+          08.20.2022, 17:30 <br />
           Seoul Westin Josun Hotel <br />
           Grand Ballroom Hall
         </span>
       </div>
     </div>
+    <section class="hero-custom">
+      <div class="about-subtitle">About the couple</div>
+      <div class="about-photo-box">
+        <img src="images/about_hyunjik.jpeg" class="about-photo" />
+        <img src="images/about_soohyun.jpeg" class="about-photo" />
+      </div>
+      <div class="about-text">
+        <span>
+          It was the fall of 2018 in the town of Oxford, <br>
+          when a boy who seemed to be too outgoing to befriend <br>
+          met a girl who rushed back to her place a few minutes after the encounter, <br>
+          saying she forgot to do the laundry. <br>
+          It is the summer of 2022, <br>
+          and the two are now getting married. <br>
+          It would make a great day <br>
+          if you could join us at the start of this unexpected yet destined journey.
+      </div>
+      <div class="about-subtitle extra-top-padding">Wedding Timeline</div>
+      <div class="about-timeline-box">
+        <img src="images/gallery/image_1.jpeg" class="about-timeline-image" />
+      </div>
+    </section>
+    <footer>
+      <span>Website designed by Soohyun & developed by Hyunjik</span>
+    </footer>
   </body>
 </html>
