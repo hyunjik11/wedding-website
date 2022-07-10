@@ -91,7 +91,8 @@ footer {
   top: 0;
   z-index: 999;
   height: var(--header-footer-height);
-  width: 100%;
+  width: calc(100% - 2 * var(--left-right-padding));
+  box-sizing: border-box;
   /* line-height: 150px; */
   transition: height 0.5s, line-height 0.5s;
   display: flex;
@@ -100,6 +101,16 @@ footer {
   flex-shrink: 1;
   flex-basis: auto;
 }
+.box-custom {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  padding: 0 var(--left-right-padding);
+  margin: 0;
+}
+
 .navbar-custom {
   display: flex;
   align-items: stretch;
@@ -132,6 +143,7 @@ footer {
   margin-right: 1vw;
   align-items: stretch;
   display: flex;
+  font-family: var(--font-navbar);
 }
 .navbar-item-custom {
   background-color: transparent;
@@ -178,31 +190,6 @@ footer {
   justify-content: center;
   align-items: center;
 }
-@media screen and (min-width: 800px) {
-  .image-content {
-    display: none;
-  }
-  .image-bigscreen {
-    height: 85vh;
-    width: 100%;
-    object-fit: contain;
-    padding: calc(7vh + var(--header-footer-height)) 3vw 5vh;
-  }
-}
-@media screen and (max-width: 800px) {
-  .image-content {
-    background-image: url("images/main_photo_mobile.jpeg");
-    margin-top: 7vh;
-  }
-  .image-bigscreen {
-    display: none;
-  }
-}
-@media screen and (max-width: 800px) and (min-width: 400px) {
-  .date-venue {
-    font-size: 3vw;
-  }
-}
 a {
   cursor: pointer;
   text-decoration: none;
@@ -236,9 +223,10 @@ a:hover {
   width: 100%;
   padding-top: 3vh;
   padding-bottom: 1vh;
+  font-weight: bold;
 }
 .extra-top-padding {
-  padding-top: 5vh;
+  padding-top: 10vh;
 }
 .about-photo-box {
   display: flex;
@@ -246,7 +234,7 @@ a:hover {
   justify-content: center;
 }
 .about-photo {
-  width: 40vw;
+  width: 45vw;
   height: auto;
   padding: 0 1vw;
 }
@@ -263,7 +251,10 @@ a:hover {
   width: 280px;
   height: auto;
 }
-
+#map {
+  height: 50vh;
+  width: auto;
+}
 .label-column:nth-child(1) {
   width: 10%;
   margin-left: auto;
@@ -288,7 +279,7 @@ a:hover {
 .bank-details {
   background: white;
   color: rgb(89, 87, 87);
-  width: 400px;
+  width: 280px;
   height: 45px;
   display: none;
 }
@@ -300,4 +291,60 @@ a:hover {
 }
 .transform-active {
   transform: rotateZ(180deg);
+}
+#darkbox {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.9);
+  overflow: hidden;
+  text-align: center;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+.darkboximg {
+  max-width: 90vw;
+  max-height: 90vh;
+  z-index: 1001;
+}
+@media screen and (min-width: 800px) {
+  .image-content {
+    display: none;
+  }
+  .image-bigscreen {
+    height: 85vh;
+    width: 100%;
+    object-fit: contain;
+    padding: calc(7vh + var(--header-footer-height)) 3vw 5vh;
+  }
+  #map {
+    margin-left: 10vw;
+    margin-right: 10vw;
+  }
+}
+@media screen and (max-width: 800px) {
+  .image-content {
+    background-image: url("images/main_photo_mobile.jpeg");
+    margin-top: 7vh;
+  }
+  .image-bigscreen {
+    display: none;
+  }
+}
+@media screen and (max-width: 800px) and (min-width: 400px) {
+  .date-venue {
+    font-size: 2.5vw;
+  }
+}
+@media screen and (max-width: 400px) {
+  .about-text {
+    font-size: 12px;
+  }
 }

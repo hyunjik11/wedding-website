@@ -30,19 +30,6 @@
       #global-nav-custom {
         position: fixed;
         background-color: var(--background-color);
-        padding: 0 var(--left-right-padding);
-      }
-      .box-custom {
-        display: flex;
-        flex-direction: column;
-        position: relative;
-        height: 100vh;
-        width: 100vw;
-        padding: 0 var(--left-right-padding);
-        margin: 0;
-      }
-      .navbar-item-custom {
-        font-family: var(--font-kor), serif;
       }
       .date-venue {
         font-family: var(--font-kor), serif;
@@ -73,7 +60,7 @@
       label {
         background: rgb(246, 236, 236);
         color: rgb(215, 126, 132);
-        width: 400px;
+        width: 280px;
         height: 30px;
         -webkit-appearance: push-button;
         -moz-appearance: button;
@@ -82,7 +69,11 @@
         justify-content: center;
         cursor: pointer;
       }
+      .english-font {
+        font-family: var(--font-navbar);
+      }
     </style>
+    <script async src="map.js"></script>
   </head>
 
   <body>
@@ -100,10 +91,7 @@
           <div class="navbar-menu-custom">
             <div class="navbar-end-custom">
               <a class="navbar-item-custom" href="gallery_kor.html"> 갤러리 </a>
-              <a class="navbar-item-custom" href="venue_kor.html">
-                오시는 길
-              </a>
-              <a class="navbar-item-custom" href="index.html"> English </a>
+              <a class="navbar-item-custom english-font" href="index.html"> English </a>
             </div>
           </div>
         </div>
@@ -112,7 +100,7 @@
       <img class="image-bigscreen" src="images/main_photo_orig.jpeg" />
       <div class="date-venue">
         <span>
-          08.20.2022, 17:30<br />
+          08.20.2022, 토 17:30<br />
           서울 웨스틴 조선 호텔 <br />
           그랜드볼룸홀
         </span>
@@ -141,7 +129,17 @@
 
       <div class="about-subtitle extra-top-padding">결혼식 타임라인</div>
       <div class="about-timeline-box">
-        <img src="images/gallery/image_1.jpeg" class="about-timeline-image" />
+        <img src="images/wedding_timeline.png" class="about-timeline-image" />
+      </div>
+      <div class="about-subtitle extra-top-padding">오시는 길</div>
+      <div id="map"></div>
+      <div class="about-text">
+        <span>
+          <b>주소</b>: 서울 중구 소공로 106, 서울 웨스틴 조선 호텔
+          <br />
+          <b>주차</b>: 호텔 주차장 이용 가능 <br />
+          <b>지하철</b>: 시청역 (1호선) 6번 출구 또는 을지로1가역 (2호선) 4번출구
+        </span>  
       </div>
       <div class="about-subtitle extra-top-padding">마음 전하실 곳</div>
       <div class="bank-div">
@@ -195,5 +193,49 @@
       src="https://kit.fontawesome.com/493cc16663.js"
       crossorigin="anonymous"
     ></script>
+    <script
+      async
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD63t9I7vwqdt_cvHXz1gJm-ryPmc2SDTY&callback=initMap"
+    ></script>
+    <script>
+      let darkBoxVisible = false;
+      
+      window.addEventListener("load", (event) => {
+        let images = document.querySelectorAll(".about-photo");
+        if (images !== null && images !== undefined && images.length > 0) {
+          images.forEach(function (img) {
+            img.addEventListener("click", (evt) => {
+              showDarkbox(img.src);
+            });
+          });
+        }
+      });
+      function showDarkbox(url) {
+        if (!darkBoxVisible) {
+          // Create the darkBox
+          var div = document.createElement("div");
+          div.id = "darkbox";
+          div.innerHTML = '<img class="darkboximg" src="' + url + '" />';
+          document.body.appendChild(div);
+          let box = document.getElementById("darkbox");
+          box.addEventListener("click", (event) => {
+            // Remove it
+            let element = document.getElementById("darkbox");
+            element.parentNode.removeChild(element);
+
+            darkBoxVisible = false;
+          });
+
+          darkBoxVisible = true;
+        } else {
+          // Remove it
+          let element = document.getElementById("darkbox");
+          element.parentNode.removeChild(element);
+
+          darkBoxVisible = false;
+        }
+      }
+    </script>
+
   </body>
 </html>
