@@ -4,7 +4,7 @@
   --font-title: Palantino;
   --font-navbar: "copperplatelight";
   --font-venue: "copperplate";
-  --font-kor: "Nanum Myeongjo";
+  --font-kor: "bareunbatang";
   --header-footer-height: 8vh;
   --left-right-padding: 4vw;
   --background-color: rgb(253, 249, 246);
@@ -31,6 +31,11 @@
   font-weight: 100;
 }
 
+@font-face {
+  font-family: "bareunbatang";
+  src: url("fonts/BareunBatangOTFM.otf.otf") format("opentype");
+}
+
 html {
   margin: 0;
   padding: 0;
@@ -39,7 +44,7 @@ html {
   font-size: 16px;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  min-width: 300px;
+  min-width: 200px;
   overflow-x: hidden;
   overflow-y: scroll;
   text-rendering: optimizeLegibility;
@@ -56,7 +61,6 @@ body {
   padding: 0;
   overflow: hidden;
   color: #4a4a4a;
-  font-size: 3vw;
   font-weight: 400;
   line-height: 1.5;
   background-color: var(--background-color);
@@ -69,7 +73,7 @@ body {
   left: 0;
   right: 0;
   background-repeat: repeat;
-  background-image: url("images/white_plaster_texture.jpg");
+  background-image: url("images/white_plaster_texture.jpeg");
   mix-blend-mode: multiply;
   pointer-events: none;
   opacity: 0.2;
@@ -77,17 +81,27 @@ body {
 .date {
   display: flex;
   justify-content: center;
-  padding-bottom: 2vh;
+  padding-bottom: 13px;
 }
 .date-img {
-  height: 8vh;
+  height: 50px;
   width: auto;
 }
-.about,
-.timeline,
+.timeline {
+  /* top horizontal bottom */
+  padding: 2vh 2vw 14vh;
+}
 .venue {
-  /* vertical horizontal */
-  padding: 2vh 2vw;
+  padding: 2vh 2vw 4vh;
+}
+.about {
+  padding: 2vh 2vw 14vh;
+}
+.flowers {
+  width: 220px;
+}
+.green {
+  color: rgb(84, 140, 0);
 }
 .timeline {
   display: flex;
@@ -97,12 +111,18 @@ body {
   width: 280px;
   background-color: rgb(237, 238, 221);
   /* top horizontal bottom */
-  padding: 4vh 0 4vh;
+  padding-bottom: 4vh;
 }
 
 @media screen and (min-width: 800px) {
   body {
     font-size: 18px;
+  }
+}
+
+@media screen and (min-width: 400px) and (max-width: 800px) {
+  body {
+    font-size: 15px;
   }
 }
 
@@ -120,7 +140,7 @@ footer {
   font: var(--font);
   text-align: center;
   font-size: 0.8rem !important;
-  padding-top: 5vh;
+  padding-top: 3vh;
 }
 
 #global-nav-custom {
@@ -194,6 +214,10 @@ footer {
   color: var(--text-color);
   height: 10vh;
 }
+.image-container {
+  display: flex;
+  justify-content: center;
+}
 .date-venue {
   display: flex;
   flex: 0 1 var(--header-footer-height);
@@ -201,6 +225,7 @@ footer {
   color: var(--text-color);
   justify-content: center;
   align-items: center;
+  padding-bottom: 10vh;
 }
 a {
   cursor: pointer;
@@ -233,8 +258,7 @@ a:hover {
 .about-subtitle {
   text-align: center;
   width: 100%;
-  padding-top: 3vh;
-  padding-bottom: 1vh;
+  padding: 6vh 0;
   font-weight: bold;
 }
 .extra-top-padding {
@@ -252,8 +276,10 @@ a:hover {
 }
 .about-text {
   text-align: center;
-  font-size: 14px;
-  padding-top: 1vh;
+  /* font-size: 14px; */
+  padding: 1vh 5vw 5vh;
+  width: 100%;
+  line-height: 2;
 }
 .about-timeline-box {
   display: flex;
@@ -263,9 +289,51 @@ a:hover {
   width: 260px;
   height: auto;
 }
+.about-parents {
+  /* font-size:  */
+  padding: 20px 0 70px;
+}
+.no-thanks {
+  padding-top: 30px;
+}
+.venue-subtitle {
+  text-align: center;
+  padding-top: 4vh;
+  font-weight: bold;
+}
+.venue-subsubtitle {
+  line-height: 4;
+}
+.hr-div {
+  height: 8vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hr-div2 {
+  height: 2vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.custom-hr {
+  border: none;
+  background-color: grey;
+  text-align: center;
+  height: 1px;
+  margin: 0;
+  width: 200px;
+}
+.venue-text {
+  padding-top: 2vh;
+  padding-bottom: 5vh;
+}
+.transport-text {
+  padding-top: 6vh;
+}
 #map {
   height: 50vh;
-  width: auto;
+  width: 100%;
 }
 .label-column:nth-child(1) {
   width: 10%;
@@ -331,10 +399,10 @@ a:hover {
     display: none;
   }
   .image-bigscreen {
-    height: 75vh;
+    height: 80vh;
     width: 100%;
     object-fit: contain;
-    padding: 180px 3vw 2vh;
+    padding: 100px 3vw 2vh;
   }
   #map {
     margin: 0 5vw;
@@ -342,33 +410,49 @@ a:hover {
   .title {
     font-size: 22px;
   }
+  .about {
+    padding-top: 10vh;
+  }
+  .about-parents {
+    font-size: 20px;
+  }
 }
 @media screen and (max-width: 800px) {
   .image-smallscreen {
-    margin-top: 20vh;
+    margin-top: 100px;
     margin-bottom: 3vh;
+    width: 100vw;
   }
   .image-bigscreen {
     display: none;
   }
 }
 @media screen and (max-width: 800px) and (min-width: 400px) {
+  .image-smallscreen {
+    width: 400px;
+  }
   .date-venue {
-    font-size: 2.5vw;
+    font-size: 16px;
   }
   .title {
-    font-size: 4vw;
+    font-size: 18px;
+  }
+  .about-parents {
+    font-size: 17px;
   }
 }
 @media screen and (max-width: 400px) {
   .about-text {
     font-size: 12px;
   }
+  .about-parents {
+    font-size: 14px;
+  }
   .navbar-item-custom {
     font-size: 14px;
   }
   .title {
-    font-size: 16px;
+    font-size: 14px;
   }
   .date-venue {
     font-size: 14px;

@@ -55,9 +55,10 @@
       .header-custom {
         font-family: var(--font-kor), serif;
       }
-      .about-subtitle {
+      .about-subtitle,
+      .venue-subtitle,
+      .venue-subsubtitle {
         font-family: var(--font-venue);
-        font-weight: bold;
       }
       .korean-font {
         font-family: var(--font-kor);
@@ -77,14 +78,12 @@
       <nav id="global-nav-custom" class="animated-custom slideInDown-custom">
         <div class="paperOverlay"></div>
         <div class="navbar-item column-one">
-          <a class="navbar-item-custom" href="gallery.html">
-            Gallery
-          </a>
+          <a class="navbar-item-custom" href="gallery.html"> gallery </a>
         </div>
         <div class="navbar-item column-two">
           <a class="navbar-item-custom title" href="index.html">
-            Soohyun <br>
-            & <br>
+            Soohyun <br />
+            & <br />
             Hyunjik
           </a>
         </div>
@@ -94,10 +93,12 @@
           </a>
         </div>
       </nav>
-      <img class="image-smallscreen" src="images/main_photo.jpeg" />
-      <img class="image-bigscreen" src="images/main_photo_orig.jpeg" />
+      <div class="image-container">
+        <img class="image-smallscreen" src="images/main_photo.jpeg" />
+        <img class="image-bigscreen" src="images/main_photo_orig.jpeg" />
+      </div>
       <div class="date">
-        <img class="date-img" src="images/date.png">
+        <img class="date-img" src="images/date.png" />
       </div>
       <div class="date-venue">
         <span>
@@ -109,43 +110,67 @@
     </div>
     <section class="hero-custom">
       <div class="about">
-        <div class="about-subtitle">About the couple</div>
+        <img class="flowers" src="images/flowers.jpeg" />
+        <div class="about-subtitle green">Wedding Invitation</div>
+        <div class="about-text">
+          <span>
+            It was the fall of 2018 in the town of Oxford, <br />
+            when a boy who seemed too outgoing to befriend <br />
+            met a girl who rushed back to her place shortly, <br />
+            saying she forgot to do the laundry. <br />
+            It is the summer of 2022, <br />
+            and the two are now getting married. <br />
+            It would make a great day, <br />
+            if you could join us <br />
+            at the beginning of this unexpected journey.
+          </span>
+        </div>
         <div class="about-photo-box">
           <img src="images/about_hyunjik.jpeg" class="about-photo" />
           <img src="images/about_soohyun.jpeg" class="about-photo" />
-        </div>
-        <div class="about-text">
-          <span>
-            It was the fall of 2018 in the town of Oxford, <br>
-            when a boy who seemed to be too outgoing to befriend <br>
-            met a girl who rushed back to her place a few minutes after the encounter, <br>
-            saying she forgot to do the laundry. <br>
-            It is the summer of 2022, <br>
-            and the two are now getting married. <br>
-            It would make a great day <br>
-            if you could join us at the start of this unexpected yet destined journey.
         </div>
       </div>
       <div class="timeline">
         <div class="timeline-box">
           <div class="about-subtitle">Wedding Timeline</div>
           <div class="about-timeline-box">
-            <img src="images/wedding_timeline.png" class="about-timeline-image" />
-          </div>    
+            <img
+              src="images/wedding_timeline.jpeg"
+              class="about-timeline-image"
+            />
+          </div>
         </div>
       </div>
       <div class="venue">
-        <div class="about-subtitle">Venue</div>
+        <div class="venue-subtitle">Venue</div>
+        <div class="hr-div">
+          <hr class="custom-hr" />
+        </div>
+        <div class="venue-text">
+          Seoul Westin Josun Hotel, <br />
+          Grand Ballroom Hall (1st floor)<br />
+          <br />
+          <b>Address</b>: Seoul Jung-gu Sogong-ro 106 <br />
+          <b>T</b>: 02-771-0500
+        </div>
         <div id="map"></div>
-        <div class="about-text">
+        <div class="transport-text">
+          <span class="venue-subsubtitle">Metro</span>
+          <br />
           <span>
-            <b>Address</b>: Seoul Jung-gu Sogong-ro 106, Seoul Westin Josun Hotel
-            <br />
-            <b>Parking</b>: Hotel parking lot available. <br />
-            <b>Metro</b>: City Hall (Line 1) exit 6 or Eulgiro 1-ga Station (Line 2)
-            exit 4.
+            City Hall (Line 1) exit 6 <br />
+            or <br />
+            Eulgiro 1-ga Station (Line 2) exit 4.
           </span>
-        </div>  
+          <br /><br /><br />
+          <span class="venue-subsubtitle">Parking</span>
+          <br />
+          <span> Hotel parking lot available. </span>
+          <br /><br /><br />
+        </div>
+        <div class="hr-div2">
+          <hr class="custom-hr" />
+        </div>
       </div>
     </section>
     <footer>
