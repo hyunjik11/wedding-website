@@ -60,9 +60,47 @@ body {
   font-weight: 400;
   line-height: 1.5;
   background-color: var(--background-color);
+  position: relative;
+}
+.paperOverlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-repeat: repeat;
+  background-image: url("images/white_plaster_texture.jpg");
+  mix-blend-mode: multiply;
+  pointer-events: none;
+  opacity: 0.2;
+}
+.date {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 2vh;
+}
+.date-img {
+  height: 8vh;
+  width: auto;
+}
+.about,
+.timeline,
+.venue {
+  /* vertical horizontal */
+  padding: 2vh 2vw;
+}
+.timeline {
+  display: flex;
+  justify-content: center;
+}
+.timeline-box {
+  width: 280px;
+  background-color: rgb(237, 238, 221);
+  /* top horizontal bottom */
+  padding: 4vh 0 4vh;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 800px) {
   body {
     font-size: 18px;
   }
@@ -82,24 +120,25 @@ footer {
   font: var(--font);
   text-align: center;
   font-size: 0.8rem !important;
-  padding-top: 30px;
+  padding-top: 5vh;
 }
 
 #global-nav-custom {
   background-color: transparent;
-  /* position: fixed; */
   top: 0;
   z-index: 999;
-  height: var(--header-footer-height);
-  width: calc(100% - 2 * var(--left-right-padding));
+  width: 100%;
   box-sizing: border-box;
-  /* line-height: 150px; */
+  padding-left: var(--left-right-padding);
+  padding-right: var(--left-right-padding);
   transition: height 0.5s, line-height 0.5s;
   display: flex;
-  align-items: stretch;
-  flex-grow: 0;
-  flex-shrink: 1;
-  flex-basis: auto;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  background-color: var(--background-color);
+  padding-top: 2vh;
+  padding-bottom: 2vh;
 }
 .box-custom {
   display: flex;
@@ -107,51 +146,33 @@ footer {
   position: relative;
   height: 100vh;
   width: 100vw;
-  padding: 0 var(--left-right-padding);
+  padding: 0;
   margin: 0;
 }
-
-.navbar-custom {
-  display: flex;
-  align-items: stretch;
-}
-.container-custom {
-  align-items: stretch;
-  display: flex;
-  width: 100vw;
-  height: var(--header-footer-height);
-}
-.navbar-brand-custom {
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-}
-.navbar-menu-custom {
-  flex-grow: 1;
-  flex-shrink: 0;
-  align-items: stretch;
-  display: flex;
-}
-.navbar-end-custom {
-  justify-content: flex-end;
-  margin-left: auto;
-  margin-right: 1vw;
-  align-items: stretch;
-  display: flex;
+.navbar-item {
+  width: 33%;
+  display: block;
   font-family: var(--font-navbar);
+}
+.column-one {
+  margin-left: auto;
+}
+.column-two {
+  text-align: center;
+  line-height: 1;
+  display: flex;
+  justify-content: center;
+}
+.column-two::first-line {
+  line-height: 1.2;
+}
+.column-three {
+  margin-right: auto;
+  text-align: end;
 }
 .navbar-item-custom {
   background-color: transparent;
-  display: flex;
-  align-items: center;
-  margin: 0 2vw;
   color: var(--text-color);
-  font-weight: bold;
 }
 .hero-custom {
   -webkit-box-align: stretch;
@@ -173,19 +194,10 @@ footer {
   color: var(--text-color);
   height: 10vh;
 }
-.image-content {
-  background-image: url("images/main_photo_orig.jpeg");
-  background-repeat: no-repeat;
-  background-position: top;
-  background-size: cover;
-  padding-top: var(--header-footer-height);
-  flex: 1 1 auto;
-}
 .date-venue {
   display: flex;
   flex: 0 1 var(--header-footer-height);
   text-align: center;
-  font-weight: bold;
   color: var(--text-color);
   justify-content: center;
   align-items: center;
@@ -234,7 +246,7 @@ a:hover {
   justify-content: center;
 }
 .about-photo {
-  width: 45vw;
+  width: 45%;
   height: auto;
   padding: 0 1vw;
 }
@@ -248,7 +260,7 @@ a:hover {
   justify-content: center;
 }
 .about-timeline-image {
-  width: 280px;
+  width: 260px;
   height: auto;
 }
 #map {
@@ -315,24 +327,26 @@ a:hover {
   z-index: 1001;
 }
 @media screen and (min-width: 800px) {
-  .image-content {
+  .image-smallscreen {
     display: none;
   }
   .image-bigscreen {
-    height: 85vh;
+    height: 75vh;
     width: 100%;
     object-fit: contain;
-    padding: calc(7vh + var(--header-footer-height)) 3vw 5vh;
+    padding: 180px 3vw 2vh;
   }
   #map {
-    margin-left: 10vw;
-    margin-right: 10vw;
+    margin: 0 5vw;
+  }
+  .title {
+    font-size: 22px;
   }
 }
 @media screen and (max-width: 800px) {
-  .image-content {
-    background-image: url("images/main_photo_mobile.jpeg");
-    margin-top: 7vh;
+  .image-smallscreen {
+    margin-top: 20vh;
+    margin-bottom: 3vh;
   }
   .image-bigscreen {
     display: none;
@@ -342,9 +356,21 @@ a:hover {
   .date-venue {
     font-size: 2.5vw;
   }
+  .title {
+    font-size: 4vw;
+  }
 }
 @media screen and (max-width: 400px) {
   .about-text {
     font-size: 12px;
+  }
+  .navbar-item-custom {
+    font-size: 14px;
+  }
+  .title {
+    font-size: 16px;
+  }
+  .date-venue {
+    font-size: 14px;
   }
 }

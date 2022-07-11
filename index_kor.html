@@ -27,19 +27,22 @@
       rel="stylesheet"
     />
     <style>
-      #global-nav-custom {
-        position: fixed;
-        background-color: var(--background-color);
+      .title {
+        font-family: var(--font-kor);
+        line-height: 1.7;
+        letter-spacing: 0.2rem;
+        font-weight: 600; 
       }
       .date-venue {
         font-family: var(--font-kor), serif;
+        letter-spacing: 0.1rem;
       }
       a:hover {
         color: rgb(100, 100, 100);
       }
       section {
         margin-top: 0;
-        padding: 0 1.5rem;
+        padding: 0;
         font-family: var(--font-kor), serif;
         color: var(--text-color);
         text-align: center;
@@ -69,79 +72,96 @@
         justify-content: center;
         cursor: pointer;
       }
+      .navbar-item-custom {
+        font-family: var(--font-kor);
+      }
       .english-font {
         font-family: var(--font-navbar);
+      }
+      @media screen and (max-width: 400px) {
+        .column-two {
+          padding-left: 5vw;
+        }
       }
     </style>
     <script async src="map.js"></script>
   </head>
 
   <body>
+    <div class="paperOverlay"></div>
     <div class="box-custom">
-      <nav
-        id="global-nav-custom"
-        class="navbar-custom animated-custom slideInDown-custom"
-      >
-        <div class="container-custom">
-          <div class="navbar-brand-custom">
-            <a class="navbar-item-custom" href="index_kor.html">
-              김수현 & 김현직
-            </a>
-          </div>
-          <div class="navbar-menu-custom">
-            <div class="navbar-end-custom">
-              <a class="navbar-item-custom" href="gallery_kor.html"> 갤러리 </a>
-              <a class="navbar-item-custom english-font" href="index.html"> English </a>
-            </div>
-          </div>
+      <nav id="global-nav-custom" class="animated-custom slideInDown-custom">
+        <div class="paperOverlay"></div>
+        <div class="navbar-item column-one">
+          <a class="navbar-item-custom" href="gallery_kor.html"> 사진 </a>
         </div>
-      </nav>
-      <div class="image-content"></div>
+        <div class="navbar-item column-two">
+          <a class="navbar-item-custom title" href="index_kor.html">
+            김현직 <br>
+            김수현
+          </a>
+        </div>
+        <div class="navbar-item column-three">
+          <a class="navbar-item-custom english-font" href="index.html"> En </a>
+        </div>
+      </nav>      
+      <img class="image-smallscreen" src="images/main_photo.jpeg" />
       <img class="image-bigscreen" src="images/main_photo_orig.jpeg" />
+      <div class="date">
+        <img class="date-img" src="images/date.png">
+      </div>
       <div class="date-venue">
         <span>
-          08.20.2022, 토 17:30<br />
+          토요일 오후 5시30분<br />
           서울 웨스틴 조선 호텔 <br />
-          그랜드볼룸홀
+          그랜드볼룸홀 1층
         </span>
       </div>
     </div>
     <section class="hero-custom">
-      <div class="about-subtitle">신랑 신부에 대하여</div>
-      <div class="about-photo-box">
-        <img src="images/about_hyunjik.jpeg" class="about-photo" />
-        <img src="images/about_soohyun.jpeg" class="about-photo" />
-      </div>
-      <div class="about-text">
-        <span>
-          2018년 가을 옥스포드 <br>
-          지나치게 사교적인 것 같아 친해지기 어려울 것 같아보였던 그와 <br>
-          처음 만난 자리에서 만난지 30분만에 빨래를 널러 가야한다며 자리를 뜬 그녀가 <br>
-          2022년 여름, 서울에서 결혼을 합니다. <br>
-          <!-- 서로가 너무나 다른 사람이라고 생각했던 첫 만남 이후로 <br>
-          우연을 계기로 의외의 공통점들을 발견하며 <br>
-          서서히 굉장히 많은 부분이 닮아있다는 걸 깨달았습니다. <br>
-          어느새 서로가 서로에게 없어선 안될 존재가 되어버렸고 <br>
-          인생의 동반자가 되기로 결심했습니다. <br> -->
-          그 시작에 여러분이 함께 해주신다면 <br>
-          더할 나위 없이 특별한 하루가 될 것입니다. 
+      <div class="about">
+        <div class="about-subtitle">신랑 신부에 대하여</div>
+        <div class="about-photo-box">
+          <img src="images/about_hyunjik.jpeg" class="about-photo" />
+          <img src="images/about_soohyun.jpeg" class="about-photo" />
+        </div>
+        <div class="about-text">
+          <span>
+            2018년 가을 옥스포드 <br>
+            지나치게 사교적인 것 같아 친해지기 어려울 것 같아보였던 그와 <br>
+            처음 만난 자리에서 만난지 30분만에 빨래를 널러 가야한다며 자리를 뜬 그녀가 <br>
+            2022년 여름, 서울에서 결혼을 합니다. <br>
+            <!-- 서로가 너무나 다른 사람이라고 생각했던 첫 만남 이후로 <br>
+            우연을 계기로 의외의 공통점들을 발견하며 <br>
+            서서히 굉장히 많은 부분이 닮아있다는 걸 깨달았습니다. <br>
+            어느새 서로가 서로에게 없어선 안될 존재가 되어버렸고 <br>
+            인생의 동반자가 되기로 결심했습니다. <br> -->
+            그 시작에 여러분이 함께 해주신다면 <br>
+            더할 나위 없이 특별한 하루가 될 것입니다. 
+        </div>
       </div>
 
-      <div class="about-subtitle extra-top-padding">결혼식 타임라인</div>
-      <div class="about-timeline-box">
-        <img src="images/wedding_timeline.png" class="about-timeline-image" />
+      <div class="timeline">
+        <div class="timeline-box">
+          <div class="about-subtitle">웨딩 타임라인</div>
+          <div class="about-timeline-box">
+            <img src="images/wedding_timeline_kor.png" class="about-timeline-image" />
+          </div>    
+        </div>
       </div>
-      <div class="about-subtitle extra-top-padding">오시는 길</div>
-      <div id="map"></div>
-      <div class="about-text">
-        <span>
-          <b>주소</b>: 서울 중구 소공로 106, 서울 웨스틴 조선 호텔
-          <br />
-          <b>주차</b>: 호텔 주차장 이용 가능 <br />
-          <b>지하철</b>: 시청역 (1호선) 6번 출구 또는 을지로1가역 (2호선) 4번출구
-        </span>  
+      <div class="venue">
+        <div class="about-subtitle">오시는 길</div>
+        <div id="map"></div>
+        <div class="about-text">
+          <span>
+            <b>주소</b>: 서울 중구 소공로 106, 서울 웨스틴 조선 호텔
+            <br />
+            <b>주차</b>: 호텔 주차장 이용 가능 <br />
+            <b>지하철</b>: 시청역 (1호선) 6번 출구 또는 을지로1가역 (2호선) 4번출구
+          </span>  
+        </div>
       </div>
-      <div class="about-subtitle extra-top-padding">마음 전하실 곳</div>
+      <div class="about-subtitle">마음 전하실 곳</div>
       <div class="bank-div">
         <label for="toggle-1">
           <div class="label-column"></div>
@@ -152,7 +172,7 @@
         </label>
         <input type="checkbox" id="toggle-1" />
         <div class="bank-details one">
-          **은행 123-456-789-012<br />
+          국민은행 358802-04-341097<br />
           예금주: 김현직
         </div>
       </div>
@@ -166,8 +186,8 @@
         </label>
         <input type="checkbox" id="toggle-2" />
         <div class="bank-details two">
-          **은행 123-456-789-012<br />
-          예금주: 김수현
+          국민은행 827-21-0542-911<br />
+          예금주: 김평
         </div>
       </div>
     </section>

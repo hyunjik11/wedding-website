@@ -27,15 +27,11 @@
       rel="stylesheet"
     />
     <style type="text/css">
-      #global-nav-custom {
-        position: fixed;
-        background-color: var(--background-color);
-      }
-      .navbar-item-custom.title {
+      .title {
         font-family: var(--font-title);
         letter-spacing: 0.2rem;
+        font-weight: 600;
       }
-
       #gallery {
         line-height: 0;
         -webkit-column-count: 5;
@@ -44,9 +40,7 @@
         -moz-column-gap: 5px;
         column-count: 5;
         column-gap: 20px;
-        margin-top: 2rem;
       }
-
       #gallery img {
         width: 100% !important;
         height: auto !important;
@@ -54,11 +48,9 @@
         filter: grayscale(100%);
         /* transition: filter 2s; */
       }
-
       #gallery img:hover {
         filter: none;
       }
-
       @media (max-width: 1200px) {
         #gallery {
           -moz-column-count: 4;
@@ -88,32 +80,41 @@
         }
       }
       section {
-        padding: 3rem 1.5rem 0.5rem 1.5rem;
+        padding: 7rem 1.5rem 0.5rem 1.5rem;
       }
       .box-custom {
         height: auto;
+      }
+      .korean-font {
+        font-family: var(--font-kor);
+      }
+      @media screen and (max-width: 400px) {
+        .column-two {
+          padding-left: 5vw;
+        }
       }
     </style>
   </head>
 
   <body>
+    <div class="paperOverlay"></div>
     <div class="box-custom">
-      <nav
-        id="global-nav-custom"
-        class="navbar-custom animated-custom slideInDown-custom"
-      >
-        <div class="container-custom">
-          <div class="navbar-brand-custom">
-            <a class="navbar-item-custom title" href="index.html">
-              Soohyun & Hyunjik
-            </a>
-          </div>
-          <div class="navbar-menu-custom">
-            <div class="navbar-end-custom">
-              <a class="navbar-item-custom" href="gallery.html"> Gallery </a>
-              <a class="navbar-item-custom" href="index_kor.html"> 한글 </a>
-            </div>
-          </div>
+      <nav id="global-nav-custom" class="animated-custom slideInDown-custom">
+        <div class="paperOverlay"></div>
+        <div class="navbar-item column-one">
+          <a class="navbar-item-custom" href="gallery.html"> Gallery </a>
+        </div>
+        <div class="navbar-item column-two">
+          <a class="navbar-item-custom title" href="index.html">
+            Soohyun <br />
+            & <br />
+            Hyunjik
+          </a>
+        </div>
+        <div class="navbar-item column-three">
+          <a class="navbar-item-custom korean-font" href="index_kor.html">
+            한글
+          </a>
         </div>
       </nav>
       <section class="hero-custom">
