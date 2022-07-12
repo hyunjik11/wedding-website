@@ -208,6 +208,7 @@ footer {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  margin-top: 100px;
 }
 .header-custom {
   font-size: 6vh;
@@ -403,9 +404,6 @@ a:hover {
     width: 100%;
     object-fit: contain;
     padding: 100px 3vw 2vh;
-  }
-  #map {
-    margin: 0 5vw;
   }
   .title {
     font-size: 22px;
