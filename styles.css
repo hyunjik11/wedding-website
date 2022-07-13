@@ -157,8 +157,8 @@ footer {
   justify-content: center;
   position: fixed;
   background-color: var(--background-color);
-  padding-top: 2vh;
-  padding-bottom: 2vh;
+  padding-top: 13px;
+  padding-bottom: 13px;
 }
 .box-custom {
   display: flex;
@@ -226,7 +226,7 @@ footer {
   color: var(--text-color);
   justify-content: center;
   align-items: center;
-  padding-bottom: 10vh;
+  padding-bottom: 60px;
 }
 a {
   cursor: pointer;
@@ -418,11 +418,14 @@ a:hover {
 @media screen and (max-width: 800px) {
   .image-smallscreen {
     margin-top: 100px;
-    margin-bottom: 3vh;
+    margin-bottom: 19px;
     width: 100vw;
   }
   .image-bigscreen {
     display: none;
+  }
+  .box-custom {
+    height: 600px;
   }
 }
 @media screen and (max-width: 800px) and (min-width: 400px) {
@@ -454,5 +457,12 @@ a:hover {
   }
   .date-venue {
     font-size: 14px;
+  }
+  .about-subtitle,
+  .venue-subtitle {
+    font-size: 14px;
+  }
+  .bank-div {
+    font-size: 12px;
   }
 }
