@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Gallery</title>
+    <title>갤러리</title>
     <link rel="icon" href="images/favicon.png" />
     <meta charset="utf-8" />
     <meta property="og:title" content="Soohyun & Hyunjik" />
@@ -20,17 +20,34 @@
     <meta name="author" content="Hyunjik Kim" />
 
     <link rel="stylesheet" href="styles.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&family=Nuosu+SIL&display=swap"
-      rel="stylesheet"
-    />
     <style type="text/css">
       .title {
-        font-family: var(--font-title);
+        font-family: var(--font-kor);
+        line-height: 1.7;
         letter-spacing: 0.2rem;
         font-weight: 600;
+      }
+      #darkbox {
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(255, 255, 255, 0.9);
+        overflow: hidden;
+        text-align: center;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+      }
+      .darkboximg {
+        max-width: 90vw;
+        max-height: 90vh;
+        z-index: 1001;
       }
       #gallery {
         line-height: 0;
@@ -75,16 +92,21 @@
       section {
         padding: 0 1.5rem 0.5rem 1.5rem;
       }
+      .navbar-item-custom {
+        font-family: var(--font-kor);
+      }
+      .column-one,
+      .column-three {
+        width: 15%;
+      }
+      .column-two {
+        width: 70%;
+      }
       .box-custom {
         height: auto;
       }
-      .korean-font {
-        font-family: var(--font-kor);
-      }
-      @media screen and (max-width: 400px) {
-        .column-two {
-          padding-left: 5vw;
-        }
+      .english-font {
+        font-family: var(--font-navbar);
       }
     </style>
   </head>
@@ -95,18 +117,16 @@
       <nav id="global-nav-custom" class="animated-custom slideInDown-custom">
         <div class="paperOverlay"></div>
         <div class="navbar-item column-one">
-          <a class="navbar-item-custom" href="gallery.html"> Gallery </a>
+          <a class="navbar-item-custom" href="gallery.html"> 사진 </a>
         </div>
         <div class="navbar-item column-two">
           <a class="navbar-item-custom title" href="index.html">
-            Soohyun <br />
-            & <br />
-            Hyunjik
+            김현직 & 김수현
           </a>
         </div>
         <div class="navbar-item column-three">
-          <a class="navbar-item-custom korean-font" href="index_kor.html">
-            한글
+          <a class="navbar-item-custom english-font" href="index_eng.html">
+            EN
           </a>
         </div>
       </nav>
@@ -150,7 +170,6 @@
         </footer>
       </section>
     </div>
-
     <script>
       let darkBoxVisible = false;
       let current_image_index;
