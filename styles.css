@@ -33,7 +33,7 @@
 
 @font-face {
   font-family: "bareunbatang";
-  src: url("fonts/BareunBatangOTFM.otf.otf") format("opentype");
+  src: url("fonts/BareunBatangPro1.ttf") format("truetype");
 }
 
 html {
@@ -92,7 +92,7 @@ body {
   padding: 2vh 2vw 14vh;
 }
 .venue {
-  padding: 2vh 2vw 4vh;
+  padding: 2vh 2vw 6vh;
 }
 .about {
   padding: 2vh 2vw 14vh;
@@ -128,7 +128,7 @@ body {
 
 @media screen and (max-width: 400px) {
   body {
-    font-size: 12px;
+    font-size: 14px;
   }
 }
 
@@ -304,6 +304,7 @@ a:hover {
 }
 .venue-subsubtitle {
   line-height: 4;
+  font-weight: bold;
 }
 .hr-div {
   height: 8vh;
@@ -326,8 +327,8 @@ a:hover {
   width: 200px;
 }
 .venue-text {
-  padding-top: 2vh;
-  padding-bottom: 5vh;
+  padding-top: 13px;
+  padding-bottom: 50px;
 }
 .transport-text {
   padding-top: 6vh;
@@ -444,25 +445,25 @@ a:hover {
 }
 @media screen and (max-width: 400px) {
   .about-text {
-    font-size: 12px;
+    font-size: 14px;
   }
   .about-parents {
-    font-size: 14px;
+    font-size: 16px;
   }
   .navbar-item-custom {
-    font-size: 14px;
+    font-size: 16px;
   }
   .title {
-    font-size: 14px;
+    font-size: 16px;
   }
   .date-venue {
-    font-size: 14px;
+    font-size: 16px;
   }
   .about-subtitle,
   .venue-subtitle {
-    font-size: 14px;
+    font-size: 16px;
   }
   .bank-div {
-    font-size: 12px;
+    font-size: 14px;
   }
 }
