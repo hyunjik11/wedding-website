@@ -280,7 +280,7 @@ a:hover {
   /* font-size: 14px; */
   padding: 1vh 5vw 5vh;
   width: 100%;
-  line-height: 2;
+  line-height: 2.5;
 }
 .about-timeline-box {
   display: flex;
@@ -293,6 +293,7 @@ a:hover {
 .about-parents {
   /* font-size:  */
   padding: 20px 0 70px;
+  line-height: 2;
 }
 .no-thanks {
   padding-top: 30px;
